@@ -30,6 +30,7 @@ function concat ( stream, callback ) {
 	});
 }
 
+/*
 function cacheDependency ( cache, originalDep, inputdir ) {
 	var dep = {};
 	Object.keys( originalDep ).forEach( function ( key ) {
@@ -84,6 +85,7 @@ function generateCacheObject ( previous, inputdir, changes ) {
 
 	return cache;
 }
+*/
 
 module.exports = function browserify ( inputdir, outputdir, options, callback ) {
 	if ( !options.dest ) {
@@ -102,16 +104,18 @@ module.exports = function browserify ( inputdir, outputdir, options, callback ) 
 
 	options.basedir = inputdir;
 	var debug = options.debug = options.debug !== false; // sourcemaps by default
-	options.cache = this.node.cache = generateCacheObject( this.node.cache || {}, inputdir, this.changes );
-	options.packageCache = this.node.packageCache;
+	//options.cache = this.node.cache = generateCacheObject( this.node.cache || {}, inputdir, this.changes );
+	//options.packageCache = this.node.packageCache;
 	options.fullPaths = true;
 
 	var b = _browserify( options );
-	var cache = options.cache;
+	//var cache = options.cache;
 
+  /*
 	b.on( 'dep', function ( dep ) {
 		cacheDependency( cache, dep, inputdir );
 	});
+  */
 
 	// TODO watch dependencies outside inputdir, using a future
 	// gobble API - https://github.com/gobblejs/gobble/issues/26
