@@ -1,5 +1,5 @@
 {
-  "name": "gobble-browserify",
+  "name": "gobble-babelify",
   "version": "13.0.0",
   "description": "Bundle CommonJS modules with gobble and Browserify",
   "author": "Rich Harris",
