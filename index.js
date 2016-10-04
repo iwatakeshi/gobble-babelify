@@ -108,7 +108,7 @@ module.exports = function browserify ( inputdir, outputdir, options, callback ) 
 	//options.packageCache = this.node.packageCache;
 	options.fullPaths = true;
 
-	var b = _browserify( options );
+	var b = _browserify( options ).transform("babelify", options.babelify || {});
 	//var cache = options.cache;
 
   /*
@@ -192,5 +192,5 @@ module.exports = function browserify ( inputdir, outputdir, options, callback ) 
 		} else {
 			fs.writeFile( dest, bundle, callback );
 		}
-	}).transform("babelify", options.babelify || {});
+	});
 };
