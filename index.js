@@ -192,5 +192,5 @@ module.exports = function browserify ( inputdir, outputdir, options, callback ) 
 		} else {
 			fs.writeFile( dest, bundle, callback );
 		}
-	});
+	}).transform("babelify", options.babelify || {});
 };

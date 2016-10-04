@@ -1,12 +1,13 @@
 {
   "name": "gobble-babelify",
-  "version": "13.0.0",
-  "description": "Bundle CommonJS modules with gobble and Browserify",
-  "author": "Rich Harris",
+  "version": "1.0.0",
+  "description": "Bundle CommonJS modules with gobble, Babel, and Browserify",
+  "author": "iwatakeshi",
   "license": "MIT",
   "repository": "https://github.com/gobblejs/gobble-browserify",
   "dependencies": {
-    "browserify": "^13.0.0"
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0"
   },
   "keywords": [
     "gobble"
