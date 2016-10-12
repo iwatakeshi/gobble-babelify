@@ -1,6 +1,6 @@
-# gobble-browserify
+# gobble-babelify
 
-Bundle CommonJS modules with gobble and Browserify
+Bundle CommonJS modules with gobble and Browserify + Babel
 
 ## Installation
 
